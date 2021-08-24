@@ -1,0 +1,9 @@
+# IPv6的ddns脚本（dnspod)
+## 适用范围
++ 用于openwrt上的一个ddns脚本，理论上linux系统都可以用。
++ 服务商是dnspod，我没有其它服务商，所以只适用dnspod。
+## 使用方法
++ 登录dnspod获取`token`和`ID`,设置好一个二级域名`domain`用于ddns。
++ 将`ID`、`token`和`domain`按格式填入config文件中。
++ 修改dnspod.sh里的脚本路径为实际路径。（如果每次执行都先行定位到目录，也可以删去脚本路径两行。）
++ 运行dnspod.sh
