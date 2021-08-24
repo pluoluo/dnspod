@@ -5,5 +5,8 @@
 ## 使用方法
 + 登录dnspod获取`token`和`ID`,设置好一个二级域名`domain`用于ddns。
 + 将`ID`、`token`和`domain`按格式填入config文件中。
-+ 修改dnspod.sh里的脚本路径为实际路径。（如果每次执行都先行定位到目录，也可以删去脚本路径两行。）
++ 给dnspod.sh和record.sh赋权。
+```
+chmod +x dnspod.sh record.sh
+```
 + 运行dnspod.sh
