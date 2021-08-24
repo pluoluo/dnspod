@@ -1,5 +1,12 @@
 #!/bin/bash
-path=/root/ddns                            #脚本绝对路径
+###   脚本绝对路径
+SOURCE="$0"
+while [ -h "$SOURCE"  ]; do # resolve $SOURCE until the file is no longer a symlink
+    DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd  )"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /*  ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+path="$( cd -P "$( dirname "$SOURCE"  )" && pwd  )"                               #脚本绝对路径
 cd $path							#以下使用相对路径
 ###API信息
 # token文件保存位置
